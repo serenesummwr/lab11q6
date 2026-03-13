@@ -1,6 +1,6 @@
 # SSH / PEM Keys — never commit private keys!
 *.pem
-Docker_Key.pem
+DockerQ6_Key.pem
 
 # macOS system files
 .DS_Store
