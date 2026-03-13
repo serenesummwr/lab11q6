@@ -1,0 +1,38 @@
+in Dockerfile add this content:
+
+FROM nginx:latest
+
+COPY ./html /usr/share/nginx/html
+
+EXPOSE 80
+
+===================================
+
+To Build Image type:
+docker build -t YOUR_USERNAME/test .
+
+if you are using Apple Silicon type:
+docker build --platform linux/amd64 -t YOUR_USERNAME/test .
+in order to make your image can be run in the linux system
+
+===================================
+
+Check is image successfully build type:
+docker images
+
+===================================
+
+Login Docker Hub
+docker login
+
+===================================
+
+Push to Docker Hub
+docker push YOUR_USERNAME/test
+
+===================================
+
+Run Container
+docker run -p 8105:80 natthapoom/test
+
+===================================
